@@ -69,7 +69,13 @@ const styles = StyleSheet.create({
     inscreverTexto:{
         color: 'white',
         fontSize: 14
+    },
+    errorMessage:{
+        color: 'red',
+        marginTop: 10,
+        marginRight: 90
     }
+
 })
 
 export default styles

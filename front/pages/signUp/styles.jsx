@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems:'center',
         justifyContent:'center',
+        backgroundColor: '#220937'
     },
     ID: {
         width: '20%',
@@ -32,77 +33,29 @@ const styles = StyleSheet.create({
         padding: 5,
         fontWeight: 'bold'
     },
-    textoNomeEmail: {
-        backgroundColor: '#bbb',
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold'
+    input: {
+        backgroundColor: '#3C185A',
+        borderRadius: 5,
+        padding:8,
+        fontSize:25,
+        backgroundColor: '#3C185A',
+        color: 'white',
+        fontSize: 14
     },
-    textoCep: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-    },
-    textoNomeEmailPost: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold'
-    },
-    textoCidade: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        backgroundColor: '#bbb',
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-    },
-    textoUf: {
-        width: '20%',
-        height: 40,
-        borderRadius: 10,
-        backgroundColor: '#bbb',
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-        marginLeft:10
-        
-    },
-    textoCidadePost: {
-        backgroundColor: '#bbb',
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-    },
-    textoUfPost: {
-        backgroundColor: '#bbb',
-        width: '20%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-        
-    },
+
     title: {
-        marginTop: 20,
-        fontSize: 40,
-        fontWeight:'bold'
+        fontSize: 24,
+        color: 'white',
+    },
+    title2:{
+        fontSize: 24,
+        fontWeight:'bold',
+        color: '#9733EA'
     },
     texto2: {
-        marginTop: 10,
+        marginTop: 16,
+        color: 'white',
+        marginBottom: 12
         
     },
     textoCidade2: {
@@ -116,15 +69,14 @@ const styles = StyleSheet.create({
 
     
     btn: {
-        width: 100,
-        height: 40,
-        marginTop: 25,
-        marginBottom: 10,
-        borderWidth: 1,
-        backgroundColor: '#f00',
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
+        marginTop:20,
+        borderWidth:1,
+        borderRadius:8,
+        width:'75%',
+        height:50,
+        backgroundColor:'#9733EA',
+        alignItems:'center',
+        justifyContent:'center',
     },
     btnPost: {
         width: 100,
@@ -186,7 +138,28 @@ const styles = StyleSheet.create({
         flexDirection: "row"
     },
     campos:{
-        width:'80%',
+        width:'75%',
+    },
+    logo:{
+        marginBottom: 80
+    },
+    inscreverBox:{
+        display: 'flex',
+        flexDirection: 'row',
+        marginRight: 95,
+        marginTop: 16
+    },
+    inscrever:{
+        color: 'white'
+    },
+    inscreverTexto:{
+        color: 'white',
+        fontSize: 14
+    },
+    btnCadastrar:{
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: 'white'
     }
 });
 

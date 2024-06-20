@@ -10,6 +10,8 @@ export default function Login({ navigation }) {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
     const [token, setToken] = useState(null)
+    const [error, setError] = useState(null);
+
 
     useEffect(() => {
         AsyncStorage.setItem('token', token)
@@ -52,6 +54,8 @@ export default function Login({ navigation }) {
 
         } catch (erro){
             console.error("Deu Erro:", erro);
+            setError('Usuario ou senha incorretos');
+            Alert.alert('Erro', 'Usuário ou senha incorretos. Verifique e tente novamente.'); 
         }
         
     }
@@ -83,23 +87,14 @@ export default function Login({ navigation }) {
                 secureTextEntry={true}
             />
 
+            {error && <Text style={styles.errorMessage}>{error}</Text>}
+
             <Pressable
                 style={styles.btnOk}
                 onPress={fetchToken}
             >
                 <Text style={{ fontSize: 14, fontWeight: 'bold', color: 'white' }}>LOGIN</Text>
             </Pressable>
-
-            <View style={styles.inscreverBox}>
-                <Text style={styles.inscreverTexto}>Não tem uma conta?</Text>
-                <Pressable
-                    style={styles.inscrever}
-                    onPress={() => navigation.navigate('SignUp')}
-                >
-                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#9733EA', fontStyle: 'italic', marginLeft: 6 }}>Se inscreva</Text>
-                </Pressable>
-            </View>
-
 
         </View>
     )

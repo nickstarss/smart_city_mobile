@@ -19,13 +19,14 @@ function MyTabs() {
         <Tab.Navigator
             screenOptions={{
                 tabBarStyle: {
-                    backgroundColor: 'black',
-                    paddingBottom: 1,
+                    backgroundColor: '#341152',
+                    paddingBottom: 6,
                     paddingTop: 1,
+                    height: '7%',
                     borderTopColor: 'transparent'
                 },
-                tabBarActiveTintColor: '#f0f',
-                tabBarInactiveTintColor: '#555'
+                tabBarActiveTintColor: '#A439FB',
+                tabBarInactiveTintColor: '#7A2BBB'
             }}
 
         >
@@ -40,17 +41,7 @@ function MyTabs() {
                     )
                 }}
             />
-            <Tab.Screen
-                name="SignUp"
-                component={SignUp}
-                options={{
-                    headerShown: false,
-                    tabBarStyle: { display: 'none' },
-                    tabBarIcon: ({ size, color }) => (
-                        <Feather name="user" size={size} color={color} />
-                    )
-                }}
-            />
+            
             <Tab.Screen
                 name="Home"
                 component={Home}
@@ -63,14 +54,15 @@ function MyTabs() {
             />
 
             <Tab.Screen
-                name="Delete"
-                component={Delete}
+                name="Sensores"
+                component={Read}
                 options={{
                     headerShown:false,
                     tabBarIcon: ({ size, color }) => (
-                        <Feather name="delete" size={size} color={color} />
+                        <Feather name="wifi" size={size} color={color} />
                     )
-                }} />
+                }}
+            />
 
         </Tab.Navigator>
     );
@@ -87,11 +79,6 @@ export default function Routers() {
                     component={MyTabs}
                     options={{ headerShown: false }}
                 />
-                <Pilha.Screen
-                    name="Delete"
-                    component={Delete}
-                    options={{ headerShown: false }}
-                />
 
                 <Pilha.Screen
                     name="Home"
@@ -100,8 +87,8 @@ export default function Routers() {
                 />
 
                 <Pilha.Screen
-                    name="SignUp"
-                    component={SignUp}
+                    name="Sensores"
+                    component={Read}
                     options={{ headerShown: false }}
                 />
 

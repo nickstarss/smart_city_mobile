@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, Pressable, TextInput } from 'react-native'
+import { View, Text, Pressable, TextInput, Image } from 'react-native'
 import { FontAwesome, AntDesign } from "@expo/vector-icons"
 import styles from './styles'
 import axios from 'axios'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import logo from '../../assets/logo.png';
 
 export default function SignUp({ navigation }) {
     const [usuario, setUsuario] = useState('')
@@ -48,30 +49,46 @@ export default function SignUp({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>CREATE</Text>
+            <Image source={logo} style={styles.logo}/>
+            <View>
+                <Text style={styles.title}>Se cadastre para entrar na</Text>
+                <Text style={styles.title2}>cidade do Futuro</Text>
+            </View>
 
             <View style={styles.campos}>
-                <Text style={styles.texto2}>Nome:</Text>
+                <Text style={styles.texto2}>Nome de usuário</Text>
                 <TextInput
-                    style={styles.textoNomeEmail}
+                    placeholderTextColor='#7E3DB4'
+                    style={styles.input}
                     onChangeText={setUsuario}
                     value={usuario}
+                    placeholder='Digite seu nome de usuário'
                 />
-                <Text style={styles.texto2}>Senha:</Text>
+                <Text style={styles.texto2}>Sua senha</Text>
                 <TextInput
-                    style={styles.addNew}
+                    placeholderTextColor='#7E3DB4'
+                    style={styles.input}
                     onChangeText={(e) => setPassword(e)}
                     value={password}
                     secureTextEntry={true}
+                    placeholder='Digite sua senha'
                 />
             </View>
 
-            <View style={styles.btnBtn}>
+            <Pressable
+                style={styles.btn}
+                onPress={createUser}
+            >
+                <Text style={styles.btnCadastrar}>CADASTRAR</Text>
+            </Pressable>
+
+            <View style={styles.inscreverBox}>
+                <Text style={styles.inscreverTexto}>Já tem uma conta?</Text>
                 <Pressable
-                    style={styles.btn}
-                    onPress={createUser}
+                    style={styles.inscrever}
+                    onPress={() => navigation.navigate('SignIn')}
                 >
-                    <Text style={styles.btnCadastrar}>CADASTRAR</Text>
+                    <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#9733EA', fontStyle: 'italic', marginLeft: 6 }}>Fazer login</Text>
                 </Pressable>
             </View>
 

@@ -6,155 +6,37 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems:'center',
         justifyContent:'center',
+        backgroundColor: '#220937'
     },
-    ID: {
-        width: '20%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        paddingLeft: 10,
-        fontWeight: 'bold'
-    },
-    addNew: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        paddingLeft: 10,
-        fontWeight: 'bold'
-    },
-    texto: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        backgroundColor: '#bbb',
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold'
-    },
-    textoNomeEmail: {
-        backgroundColor: '#bbb',
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold'
-    },
-    textoCep: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-    },
-    textoNomeEmailPost: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold'
-    },
-    textoCidade: {
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        backgroundColor: '#bbb',
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-    },
-    textoUf: {
-        width: '20%',
-        height: 40,
-        borderRadius: 10,
-        backgroundColor: '#bbb',
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-        marginLeft:10
-        
-    },
-    textoCidadePost: {
-        backgroundColor: '#bbb',
-        width: '100%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-    },
-    textoUfPost: {
-        backgroundColor: '#bbb',
-        width: '20%',
-        height: 40,
-        borderRadius: 10,
-        borderWidth: 1,
-        padding: 5,
-        fontWeight: 'bold',
-        
-    },
-    title: {
-        marginTop: 20,
-        fontSize: 40,
-        fontWeight:'bold'
-    },
-    texto2: {
+    divSensor:{
+        textAlign: 'center',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor: '#341152',
+        padding: 15,
+        width: '70%',
         marginTop: 10,
-        
+        marginLeft: 60,
+        borderRadius: 8
     },
-    textoCidade2: {
-        marginTop: 10,
-        
+    textoSensor:{
+        color: 'white'
     },
-    textoUf2: {
-        marginTop: 10,
-        marginLeft: '70%'
+    textoSensorTitulo:{
+        color: '#9435E1',
+        fontWeight: 'bold',
+        fontSize: 18,
+        marginBottom: 20
     },
-
-    
-    btn: {
-        width: 100,
-        height: 40,
-        marginTop: 25,
-        marginBottom: 10,
-        borderWidth: 1,
-        backgroundColor: '#f00',
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
+    titulo:{
+        marginRight: 190,
+        marginTop: 60,
+        color: '#9733EA',
+        fontSize: 22,
+        fontWeight: 'bold'
     },
-    btnPost: {
-        width: 100,
-        height: 40,
-        marginTop: 25,
-        marginBottom: 10,
-        borderWidth: 1,
-        backgroundColor: '#00f',
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    btnBuscar: {
-        width: '20%',
-        height: 40,
-        marginBottom: 10,
-        borderWidth: 1,
-        backgroundColor: '#000',
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        
-    },
-    cx: {
-        marginTop: 1,
+    sersorContainer:{
         width: '100%',
-        flexDirection: "row"
-    },
-    campos:{
-        width:'80%',
     }
 });
 
